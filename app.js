@@ -1,16 +1,17 @@
 // Search button is clicked. Run through API
-// document.getElementById('search').addEventListener('click', event => {
-//     event.preventDefault()
+document.getElementById('search').addEventListener('click', event => {
+    event.preventDefault()
 
-//     let name = document.getElementById('name').value
+    let name = document.getElementById('name').value
 
-//     axios.get(`https://api.nal.usda.gov/fdc/v1/foods/search?api_key=ckuDCJZTvGODnGVYDC4FTRlLhXJhmjEtg3slZV4Z&query=${name}`)
-//         .then(res => {
-//         console.log(res.data)
+    axios.get(`https://api.nal.usda.gov/fdc/v1/foods/search?api_key=ckuDCJZTvGODnGVYDC4FTRlLhXJhmjEtg3slZV4Z&query=${name}`)
+        .then(res => {
+        console.log(res.data)
 
-//     })
-//     .catch(err => { console.log(err) })
-//   })
+    })
+    .catch(err => { console.log(err) })
+  })
+
 
   document.getElementById('search').addEventListener('click', event => {
     event.preventDefault()
