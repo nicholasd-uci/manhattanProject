@@ -2,6 +2,16 @@
 # manhattanProject
 
 <<<<<<< HEAD
+this is updated
+
+=======
+David was here
+>>>>>>> e1bf7567b45b733631c22adf6a9c2b7dc4bdd60a
+=======
+<<<<<<< HEAD
+# manhattanProject
+
+<<<<<<< HEAD
 hello there
 
 GE N ERAL KENOBI
@@ -21,3 +31,4 @@ https://api.nal.usda.gov/fdc/v1/foods/search?api_key=ckuDCJZTvGODnGVYDC4FTRlLhXJ
 ### Spoonacular
 https://api.spoonacular.com/recipes/complexSearch?apiKey=85a06dbd80b548e1822e70e6227765b4&query=${name}
 >>>>>>> 3cd7684778f56cb0da4d6462873784ad02ef35ab
+>>>>>>> 26561074cf5b93f21b8f429b919f5d8536c02255
