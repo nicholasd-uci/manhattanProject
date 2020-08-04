@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <h1>Pantry</h1>
 
     <form>
@@ -33,6 +35,28 @@
     </div>
 
 
+    <!-- Maxwell's script -->
+    <form>
+        <p>
+            <label for="name">name</label>
+            <input type="text" name="name" id="name">
+        </p>
+        <p>
+            <button id="search">Search</button>
+        </p>
+    </form>
+
+    <div id="nutrition"></div>
+
+    <img src="" alt="">
+
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Maxwell's script -->
+    <script src="./app.js"></script>
+
+
 
 
 
@@ -44,11 +68,11 @@
         function writePantry() {
             let userPantry = JSON.parse(localStorage.getItem('userPantry')) || []
             document.getElementById('listPantry').innerHTML = ''
-                for (let i = 0; i < userPantry.length; i++) {
-                    let listItem = document.createElement('li')
-                    listItem.innerHTML = userPantry[i]
-                    document.getElementById('listPantry').append(listItem)
-                }
+            for (let i = 0; i < userPantry.length; i++) {
+                let listItem = document.createElement('li')
+                listItem.innerHTML = userPantry[i]
+                document.getElementById('listPantry').append(listItem)
+            }
         }
 
         function listPantryItems() {
@@ -65,12 +89,12 @@
 
         // Track user items in pantry. Same pantry items cannot exist.
         // Pass through axios request to only log valid grocery items.
-        document.getElementById('submitPantry').addEventListener('click', function() {
+        document.getElementById('submitPantry').addEventListener('click', function () {
             event.preventDefault()
             let addPantry = document.getElementById('userPantry').value
             console.log(addPantry)
             let userPantry = JSON.parse(localStorage.getItem('userPantry')) || []
-            if ((userPantry.includes(addPantry) !== true ) || (userPantry.length === 0)) {
+            if ((userPantry.includes(addPantry) !== true) || (userPantry.length === 0)) {
                 userPantry.push(addPantry)
                 localStorage.setItem('userPantry', JSON.stringify(userPantry))
                 writePantry()
@@ -92,4 +116,5 @@
     </script>
 
 </body>
+
 </html>
