@@ -4,11 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="nutrition.html">
+
+    <title>Shopping List</title>
 </head>
 
 <body>
-    <hi1>yes</hi1>
+    <nav class="demo">
+        <a href="#" class="brand">
+            <!-- <img class="logo" src="/img/basket.png" /> -->
+            <span>NutraPrep</span>
+        </a>
+    
+        <!-- responsive-->
+        <input id="bmenub" type="checkbox" class="show">
+        <label for="bmenub" class="burger pseudo button">Menu</label>
+    
+        <div class="menu">
+            <a href="index2.html" class="button  warning">Home</a>
+            <a href="nutrition.html" class="button  warning">Nutrition</a>
+            <a href="recipes.html" class="button warning">Recipes</a>
+            <a href="shopping.html" class="button warning">Shopping List</a>
+        </div>
+    </nav>
+<br><br><br>  
+<div class="flex three center demo">
+    <div class = "three-fourth"><span>
+    <article class="card">
+            <fieldset id="itemInput">
+                <p>
+                    <label for="item">Item</label>
+                    <input type="text" name="item" id="item">
+                </p>
+                <p>
+                    <button id="addItem" class="warning">Add to Grocery List</button>
+                </p>
+            </fieldset>
+    </article>
+    </span></div>
+</div>
+<div class="flex two center demo"><span>
+    <div class="full">
+        <article class="card">
+            <ul id="items"></ul>
+        </article>
+    </div>
+</span></div>
+    <script>
+
+        let items = []
+
+        document.getElementById('addItem').addEventListener('click', event => {
+            event.preventDefault()
+            let itemObj = {
+                text: document.getElementById('item').value,
+                isDone: false
+            }
+            items.push(itemObj)
+            localStorage.setItem('items', JSON.stringify(items))
+            let itemElem = document.createElement('li')
+            itemElem.className = 'todo'
+            // itemElem.textContent = document.getElementById('item').value
+            itemElem.innerHTML = `
+                ${document.getElementById('item').value}
+                <button class="delete error">x</button>
+            `
+            document.getElementById('items').append(itemElem)
+            document.getElementById('item').value = ''
+        })
+
+        document.addEventListener('click', event => {
+            if(event.target.classList.contains('delete')) event.target.parentNode.remove()
+            
+        })
+
+    </script>
 </body>
 
 </html>

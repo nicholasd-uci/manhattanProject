@@ -5,3 +5,7 @@ body {
 .menu {
     color: teal;
 }
+
+.card {
+    padding-top: 10px;
+}
