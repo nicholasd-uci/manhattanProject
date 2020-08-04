@@ -15,7 +15,6 @@
         <label for="">Food items I have:</label>
         <input type="text" id="userPantry">
         <button id="submitPantry">Add to my pantry</button>
-
     </form>
     <hr>
 
@@ -62,8 +61,8 @@
 
     <script>
 
-
         let userPantry = JSON.parse(localStorage.getItem('userPantry')) || []
+
 
         function writePantry() {
             let userPantry = JSON.parse(localStorage.getItem('userPantry')) || []
@@ -75,6 +74,7 @@
             }
         }
 
+
         function listPantryItems() {
             console.log(userPantry)
             if (userPantry.length > 0) {
@@ -83,8 +83,6 @@
                 console.log('pantry is empty!')
             }
         }
-
-
 
 
         // Track user items in pantry. Same pantry items cannot exist.
@@ -104,14 +102,7 @@
             document.getElementById('userPantry').value = ''
         })
 
-
-
         listPantryItems()
-
-
-
-
-
 
     </script>
 
