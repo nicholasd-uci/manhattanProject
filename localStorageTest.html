@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Pantry</h1>
+
+    <form>
+        <label for="">Food items I have:</label>
+        <input type="text" id="userPantry">
+        <button id="submitPantry">Add to my pantry</button>
+
+    </form>
+    <hr>
+
+    <h1>Shopping list</h1>
+    <form>
+        <label for="">Food items I need:</label>
+        <input type="text" id="shoppingList">
+        <button>Add to my cart</button>
+    </form>
+    <hr>
+
+    <h1>Grocery Items</h1>
+    <div>
+        <ol>
+            <!-- list items here -->
+        </ol>
+    </div>
+
+
+
+
+
+    <script>
+
+        document.getElementById('submitPantry').addEventListener('click', function() {
+            event.preventDefault()
+            let addPantry = document.getElementById('userPantry').value
+            console.log(addPantry)
+            let userPantry = JSON.parse(localStorage.getItem('userPantry')) || []
+            if ((userPantry.includes(addPantry) !== true ) || (userPantry.length === 0)) {
+                userPantry.push(addPantry)
+                localStorage.setItem('userPantry', JSON.stringify(userPantry))
+            } else {
+                console.log(`${addPantry} is already in your pantry`)
+            }
+            document.getElementById('userPantry').value = ''
+            
+        })
+
+
+
+
+
+    </script>
+
+</body>
+</html>
