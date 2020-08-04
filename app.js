@@ -6,13 +6,7 @@ document.getElementById('search').addEventListener('click', event => {
     axios.get(`https://api.nal.usda.gov/fdc/v1/foods/search?api_key=ckuDCJZTvGODnGVYDC4FTRlLhXJhmjEtg3slZV4Z&query=${name}`)
         .then(res => {
         console.log(res.data)
-        // document.getElementById('weather').innerHTML = `
-        // <h1>${res.data.name}</h1>
-        // <h2>Weather: ${res.data.weather[0].description}</h2>
-        // <h3>Temperature: ${res.data.main.temp}</h3>
-        // <h3>Humidity: ${res.data.main.humidity}</h3>
-        // <h3>Wind Speed: ${res.data.wind.speed}</h3>
-        // `
+
     })
     .catch(err => { console.log(err) })
   })
@@ -26,19 +20,21 @@ document.getElementById('search').addEventListener('click', event => {
         .then(res => {
         console.log(res.data)
 
-        document.getElementById('nutrition').innerHTML = `
-            <img src = ${res.data.results[0].image} >
+        for (let i=0; i<10; i++) {
+        // document.getElementById('nutrition').innerHTML = `
+        //     <img src = ${res.data.results[i].image} >
         
-        `
-        
-
-        // document.getElementById('weather').innerHTML = `
-        // <h1>${res.data.name}</h1>
-        // <h2>Weather: ${res.data.weather[0].description}</h2>
-        // <h3>Temperature: ${res.data.main.temp}</h3>
-        // <h3>Humidity: ${res.data.main.humidity}</h3>
-        // <h3>Wind Speed: ${res.data.wind.speed}</h3>
         // `
+        let imageEle = document.createElement('img')
+        imageEle.setAttribute('src', `${res.data.results[i].image}`)
+        
+        imageEle.classList.add('image')
+
+
+
+        document.getElementById('nutrition').append(imageEle)
+
+        }
     })
     .catch(err => { console.log(err) })
   })
