@@ -1,8 +1,13 @@
+<<<<<<< HEAD
  nicholas
+=======
+<<<<<<< HEAD
+>>>>>>> 7b2fe448a75592f165fee4a00df022c09981adc0
 # manhattanProject
 
 <<<<<<< HEAD
 this is updated
+<<<<<<< HEAD
 
 
 HEAD
@@ -10,7 +15,11 @@ HEAD
 
  HEAD
 =======
+
+>>>>>>> 7b2fe448a75592f165fee4a00df022c09981adc0
+=======
 David was here
+>>>>>>> e1bf7567b45b733631c22adf6a9c2b7dc4bdd60a
 =======
 <<<<<<< HEAD
 # manhattanProject
@@ -41,4 +50,7 @@ https://api.spoonacular.com/recipes/complexSearch?apiKey=85a06dbd80b548e1822e70e
 =======
 >>>>>>> 3cd7684778f56cb0da4d6462873784ad02ef35ab
 >>>>>>> 26561074cf5b93f21b8f429b919f5d8536c02255
+<<<<<<< HEAD
 >>>>>>> cfe263d5198bdaf50e68e6c6922376f8b2069f77
+=======
+>>>>>>> 7b2fe448a75592f165fee4a00df022c09981adc0
