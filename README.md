@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 # manhattanProject
 
+<<<<<<< HEAD
 this is updated
 
+=======
+David was here
+>>>>>>> e1bf7567b45b733631c22adf6a9c2b7dc4bdd60a
 =======
 <<<<<<< HEAD
 # manhattanProject
