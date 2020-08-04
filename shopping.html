@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="nutrition.html">
-
+<script src="https://kit.fontawesome.com/7637836c8a.js" crossorigin="anonymous"></script>
     <title>Shopping List</title>
 </head>
 
@@ -40,7 +40,7 @@
                     <input type="text" name="item" id="item">
                 </p>
                 <p>
-                    <button id="addItem" class="warning">Add to Grocery List</button>
+                    <button id="addList" class="warning">Add to Grocery List</button>
                 </p>
             </fieldset>
     </article>
@@ -49,30 +49,31 @@
 <div class="flex two center demo"><span>
     <div class="full">
         <article class="card">
-            <ul id="items"></ul>
+            <h2>Shopping List:</h2>
+            <ul id="groceries"></ul>
         </article>
     </div>
 </span></div>
     <script>
 
-        let items = []
+        let groceries = []
 
-        document.getElementById('addItem').addEventListener('click', event => {
+        document.getElementById('addList').addEventListener('click', event => {
             event.preventDefault()
             let itemObj = {
                 text: document.getElementById('item').value,
                 isDone: false
             }
-            items.push(itemObj)
-            localStorage.setItem('items', JSON.stringify(items))
+            groceries.push(itemObj)
+            localStorage.setItem('groceries', JSON.stringify(groceries))
             let itemElem = document.createElement('li')
-            itemElem.className = 'todo'
-            // itemElem.textContent = document.getElementById('item').value
+            itemElem.className = 'shop'
+
             itemElem.innerHTML = `
                 ${document.getElementById('item').value}
-                <button class="delete error">x</button>
+                <button class="delete error"><i class="fas fa-backspace"></i></button>
             `
-            document.getElementById('items').append(itemElem)
+            document.getElementById('groceries').append(itemElem)
             document.getElementById('item').value = ''
         })
 
