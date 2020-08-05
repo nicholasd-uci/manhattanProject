@@ -1,4 +1,9 @@
-#nav {
-    margin-bottom: 10px;
-    background-color: rebeccapurple;
+body {
+    background-color: rgba(0, 131, 131, 0.658);
 }
+
+.menu {
+    color: teal;
+}
+
+
