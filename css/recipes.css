@@ -30,11 +30,6 @@ body {
     margin-top: 26px;
 }
 
-#footer {
-    position: absolute;
-    bottom: 0;
-}
-
 @media (max-width: 600px) {
     #navBarMotto {
         font-size: small;
