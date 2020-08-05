@@ -11,7 +11,7 @@ body {
 } */
 
 .nav {
-    background-color: aqua;
+    background-color: lightblue;
 }
 
 .logo {
@@ -20,7 +20,7 @@ body {
     
 }
 .card {
-    background-color:aqua;
+    background-color: lightblue;
     border: solid orangered 2px;
     display: block;
     margin-left: auto;
@@ -75,7 +75,7 @@ input {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: aqua;
+    background-color: lightblue;
     color: orangered;
     text-align: center;
   }
