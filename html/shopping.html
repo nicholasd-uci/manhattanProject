@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+<link rel="stylesheet" href="../css/shopping.css">
+<script src="https://kit.fontawesome.com/7637836c8a.js" crossorigin="anonymous"></script>
+<link rel="icon" href="../Assets/img/faviconLogo.ico">
+    <title>NutraPrep</title>
+</head>
+
+<body>
+    <nav id="Nav" class="demo">
+        <a href="#" class="brand">
+            <img class="logo" src="../Assets/img/2020-08-04 (2).png" />
+            <span id="navBarMotto">NutraPrep: Nutrition & Preperation = No Problem</span>
+        </a>
+    
+        <!-- responsive-->
+        <input id="bmenub" type="checkbox" class="show">
+        <label for="bmenub" class="burger pseudo button">Menu</label>
+    
+        <div class="menu">
+            <a href="../index.html" class="button  warning">Home</a>
+            <a href="./nutrition.html" class="button  warning">Nutrition</a>
+            <a href="./recipes.html" class="button warning">Recipes</a>
+            <a href="shopping.html" class="button warning">Shopping List</a>
+        </div>
+    </nav>
+<br><br><br>  
+<div class="flex three center demo">
+    <div class = "three-fourth"><span>
+    <article class="card">
+            <fieldset id="itemInput">
+                <p>
+                    <label for="item">Item</label>
+                    <input type="text" name="item" id="item">
+                </p>
+                <p>
+                    <button id="addList" class="warning">Add to Grocery List</button>
+                </p>
+            </fieldset>
+    </article>
+    </span></div>
+</div>
+<div class="flex two center demo"><span>
+    <div class="full">
+        <article class="card">
+            <h2>Shopping List:</h2>
+            <ul id="groceries"></ul>
+        </article>
+    </div>
+</span></div>
+<div id="footer">
+    <footer>
+        <p>Developed By | ❤️️ NutraPrep ~ Dream Team
+            &copy; NutraPrep</p>
+    </footer>
+</div>
+    <script>
+
+        let groceries = []
+
+        document.getElementById('addList').addEventListener('click', event => {
+            event.preventDefault()
+            let itemObj = {
+                text: document.getElementById('item').value,
+                isDone: false
+            }
+            groceries.push(itemObj)
+            localStorage.setItem('groceries', JSON.stringify(groceries))
+            let itemElem = document.createElement('li')
+            itemElem.className = 'shop'
+
+            itemElem.innerHTML = `
+                ${document.getElementById('item').value}
+                <button class="delete error"><i class="fas fa-backspace"></i></button>
+            `
+            document.getElementById('groceries').append(itemElem)
+            document.getElementById('item').value = ''
+        })
+
+        document.addEventListener('click', event => {
+            if(event.target.classList.contains('delete')) event.target.parentNode.remove()
+            
+        })
+
+    </script>
+</body>
+
+</html>
