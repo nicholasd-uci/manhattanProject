@@ -7,7 +7,7 @@ body {
 }
 
 .card {
-    background-color: rgba(0, 131, 131, 0.658);
+    background-color: rgb(250, 246, 241);
     text-align: center;
 }
 
@@ -28,6 +28,11 @@ body {
 
 #header {
     margin-top: 26px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
 }
 
 @media (max-width: 600px) {
