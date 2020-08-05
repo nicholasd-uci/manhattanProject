@@ -9,13 +9,22 @@ body {
 /* #navBarMotto {
     
 } */
+
 .nav {
     background-color: aqua;
 }
 
+.logo {
+    width: 75px;
+    height: 100px;
+    
+}
 .card {
     background-color:aqua;
     border: solid orangered 2px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .picture {
@@ -23,6 +32,10 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+#flexContainer {
+    
 }
 
 #addBtn {
@@ -68,6 +81,18 @@ input {
   }
 
   @media screen and (max-width: 600px) {
+    .column {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .column {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
     .column {
       width: 50%;
     }
