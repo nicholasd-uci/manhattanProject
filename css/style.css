@@ -1,9 +1,9 @@
 body {
-    background-color: rgba(0, 131, 131, 0.658);
+    background-color: rgb(0, 106, 177);
 }
 
 .menu {
-    color: teal;
+    color: rgb(0, 106, 177);
 }
 
 .card {
@@ -25,4 +25,8 @@ img {
 
 #searchbar {
     margin: 20px;
+}
+
+.brand {
+    color: rgb(0, 106, 177)
 }
