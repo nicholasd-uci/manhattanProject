@@ -23,11 +23,6 @@ document.getElementById('search').addEventListener('click', event => {
         .then(res => {
             console.log('spoonacular for image')
             console.log(res.data)
-
-        document.getElementById('nutrition').innerHTML = `
-            <img src = ${res.data.results[0].image} >
-        
-        `
         
 
         for (let i=0; i<10; i++) {
@@ -43,7 +38,6 @@ document.getElementById('search').addEventListener('click', event => {
     })
     .catch(err => { console.log(err) })
 })
-  })
 
 
 // Write food nutrient data to page
