@@ -6,6 +6,9 @@ body {
     color: teal;
 } */
 
+#navBarMotto {
+    
+}
 .nav {
     background-color: aqua;
 }
@@ -22,7 +25,7 @@ body {
   margin-right: auto;
 }
 
-.addBtn {
+#addBtn {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -30,16 +33,42 @@ body {
 
 h3 {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 label {
     align-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 input {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #search {
-    text-indent: center;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
 }
+
+#footer {
+    position: static;
+    font-size: x-large;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: aqua;
+    color: orangered;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 50%;
+    }
+  }
