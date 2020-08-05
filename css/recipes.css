@@ -7,7 +7,11 @@ body {
 }
 
 .card {
+<<<<<<< HEAD
     background-color: lightblue;
+=======
+    background-color: rgb(250, 246, 241);
+>>>>>>> 44dc9eb6ab215d4c7867d6eebda4560467fdce7a
     text-align: center;
 }
 
@@ -28,6 +32,11 @@ body {
 
 #header {
     margin-top: 26px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
 }
 
 @media (max-width: 600px) {
