@@ -1,7 +1,45 @@
 body {
-    background-color: rgba(0, 131, 131, 0.658);
+    background-color: whitesmoke;
 }
 
-.menu {
+/* .menu {
     color: teal;
+} */
+
+.nav {
+    background-color: aqua;
+}
+
+.card {
+    background-color:aqua;
+    border: solid orangered 2px;
+}
+
+.picture {
+    width: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.addBtn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    text-align: center;
+}
+
+label {
+    align-self: center;
+}
+
+input {
+    text-align: center;
+}
+
+#search {
+    text-indent: center;
 }
