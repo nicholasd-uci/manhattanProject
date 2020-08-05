@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(0, 106, 177);
+    background-color: rgb(250, 246, 241);
 }
 
 .menu {
@@ -8,6 +8,10 @@ body {
 
 .card {
     max-width: 100%;
+}
+
+#Nav {
+    background-color: lightblue;
 }
 
 img {
@@ -29,4 +33,22 @@ img {
 
 .brand {
     color: rgb(0, 106, 177)
+}
+
+@media (max-width: 600px) {
+    #navBarMotto {
+        font-size: small;
+    }
+}
+
+@media (max-width: 500px) {
+    #navBarMotto {
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 400px) {
+    #navBarMotto {
+        font-size: xx-small;
+    }
 }
