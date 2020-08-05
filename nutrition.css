@@ -1,0 +1,99 @@
+body {
+    background-color: whitesmoke;
+}
+
+/* .menu {
+    color: teal;
+} */
+
+/* #navBarMotto {
+    
+} */
+
+.nav {
+    background-color: aqua;
+}
+
+.logo {
+    width: 75px;
+    height: 100px;
+    
+}
+.card {
+    background-color:aqua;
+    border: solid orangered 2px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.picture {
+    width: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#flexContainer {
+    
+}
+
+#addBtn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+label {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#footer {
+    position: static;
+    font-size: x-large;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: aqua;
+    color: orangered;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .column {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .column {
+      width: 50%;
+    }
+  }
