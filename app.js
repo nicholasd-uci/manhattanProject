@@ -9,9 +9,11 @@ document.getElementById('search').addEventListener('click', event => {
 
     })
     .catch(err => { console.log(err) })
-  })
+})
 
-  document.getElementById('search').addEventListener('click', event => {
+
+
+document.getElementById('search').addEventListener('click', event => {
     event.preventDefault()
 
     let name = document.getElementById('name').value
@@ -20,21 +22,17 @@ document.getElementById('search').addEventListener('click', event => {
         .then(res => {
         console.log(res.data)
 
+
         for (let i=0; i<10; i++) {
-        // document.getElementById('nutrition').innerHTML = `
-        //     <img src = ${res.data.results[i].image} >
-        
-        // `
-        let imageEle = document.createElement('img')
-        imageEle.setAttribute('src', `${res.data.results[i].image}`)
-        
-        imageEle.classList.add('image')
-
-
-
-        document.getElementById('nutrition').append(imageEle)
-
+            let imageEle = document.createElement('img')
+            imageEle.setAttribute('src', `${res.data.results[i].image}`)
+            imageEle.classList.add('image')
+            document.getElementById('nutrition').append(imageEle)
+            axios.get(`https://api.spoonacular.com/recipes/${res.data.results[0].id}/information?apiKey=85a06dbd80b548e1822e70e6227765b4&includeNutrition=true`)
+                .then(res =>{
+                console.log(res.data)    
+            })
         }
     })
     .catch(err => { console.log(err) })
-  })
+})
