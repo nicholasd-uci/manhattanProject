@@ -2,9 +2,16 @@ body {
     background-color: whitesmoke;
 }
 
+/* .menu {
+    color: teal;
+} */
+
+/* #navBarMotto {
+    
+} */
 
 .nav {
-    background-color: lightblue;
+    background-color: aqua;
 }
 
 .logo {
@@ -13,7 +20,7 @@ body {
     
 }
 .card {
-    background-color: lightblue;
+    background-color:aqua;
     border: solid orangered 2px;
     display: block;
     margin-left: auto;
@@ -68,7 +75,7 @@ input {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: lightblue;
+    background-color: aqua;
     color: orangered;
     text-align: center;
   }
