@@ -3,11 +3,11 @@ body {
 }
 
 .menu {
-    color: teal;
+    color: lightblue;
 }
 
 .card {
-    background-color: rgba(0, 131, 131, 0.658);
+    background-color: lightblue;
     text-align: center;
 }
 
