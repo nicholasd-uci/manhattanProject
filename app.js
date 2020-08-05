@@ -28,7 +28,7 @@ document.getElementById('search').addEventListener('click', event => {
             imageEle.setAttribute('src', `${res.data.results[i].image}`)
             imageEle.classList.add('image')
             document.getElementById('nutrition').append(imageEle)
-            axios.get(`https://api.spoonacular.com/recipes/${res.data.results[0].id}/information?apiKey=85a06dbd80b548e1822e70e6227765b4&includeNutrition=true`)
+            axios.get(`https://api.spoonacular.com/recipes/${res.data.results[i].id}/information?apiKey=85a06dbd80b548e1822e70e6227765b4&includeNutrition=true`)
                 .then(res =>{
                 console.log(res.data)    
             })
