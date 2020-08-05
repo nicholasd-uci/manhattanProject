@@ -47,4 +47,3 @@ function nutritionInfo(searchedThingy) {
         document.getElementById('nutritionList').append(nutritionElem)
     }
 }
-
