@@ -7,13 +7,14 @@
     <title>NutraPrep</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
     <link rel="stylesheet" href="../css/recipes.css">
+    <link rel="icon" href='../Assets/faviconLogo.ico'>
 </head>
 
 <body>
     
 
-        <nav class="demo">
-            <a href="#" class="brand">
+        <nav id="Nav" class="demo">
+            <a class="brand">
                 <img class="logo" src="../Assets/2020-08-04 (2).png" />
                 <span>NutraPrep: Nutrition & Preperation = No Problem</span>
             </a>
@@ -21,19 +22,19 @@
             <!-- responsive-->
             <input id="bmenub" type="checkbox" class="show">
             <label for="bmenub" class="burger pseudo button">menu</label>
-
             <div class="menu">
+                <a href="index2.html" class="button warning">Home</a>
                 <a href="nutrition.html" class="button warning">Nutrition</a>
                 <a href="recipes.html" class="button warning">Recipes</a>
                 <a href="shopping.html" class="button warning">Shopping List</a>
             </div>
         </nav>
 
-        <br><br>
+        <br>
 
         
-
-        <article class="card">
+<!-- intro and search bar -->
+        <article id="header" class="card">
             <header>
                 <h3>RECIPES</h3>
             </header>
@@ -43,34 +44,19 @@
             </footer>
 
             <fieldset class="flex two">
-                <label><input type="search" placeholder="what are you looking for"></label>
+                <label><input type="search" placeholder="Enter a specific food item you would like your meal to have"></label>
             </fieldset>
-            <button>search</button>
+            <button class="warning">search</button>
         </article>
-
-        <br><br>
-
-        <div id="container">
-
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-        </div>
+        
 <!-- the grid -->
-        <div class="flex three center demo">
-
+          <div class="flex one two-500 three-1200 center demo">
             <div><span>
                 <div class="third">
                     <img class="stack"
-                        src="https://res.cloudinary.com/grohealth/image/upload/f_auto,fl_lossy,q_auto/v1583506830/DCUK/Content/iStock-521069631.jpg"
-                        alt="Low Carb">
-                    <a class="button stack">Low Carb Recipes</a>
+                        src="https://files.atkins.com/LowSugarFoods250.png?w=768&fit=max&auto=compress"
+                        alt="Low Sugar">
+                    <a class="button stack">Low Sugar</a>
                 </div>
             </span></div>
 
@@ -91,7 +77,7 @@
                     <a class="button stack">Low Calories</a>
                 </div>
             </span></div>
-
+            
             <div><span>
                 <div class="third">
                     <img class="stack"
@@ -104,17 +90,21 @@
             <div><span>
                 <div class="third">
                     <img class="stack"
-                        src="https://files.atkins.com/LowSugarFoods250.png?w=768&fit=max&auto=compress"
-                        alt="Low Sugar">
-                    <a class="button stack">Low Sugar</a>
+                        src="https://res.cloudinary.com/grohealth/image/upload/f_auto,fl_lossy,q_auto/v1583506830/DCUK/Content/iStock-521069631.jpg"
+                        alt="Low Carb">
+                    <a class="button stack">Low Carb Recipes</a>
                 </div>
             </span></div>
           </div>
 
-    </div>
 
 
-
+<div id="footer">
+    <footer>
+        <p>Developed By | ❤️️ NutraPrep ~ Dream Team
+            &copy; NutraPrep</p>
+    </footer>
+</div>
 </body>
 
 </html>

@@ -1,9 +1,49 @@
 body {
-    background-color: rgba(0, 131, 131, 0.658);
+    background-color: rgb(250, 246, 241);
 }
 
 .menu {
     color: teal;
 }
 
+.card {
+    background-color: rgba(0, 131, 131, 0.658);
+    text-align: center;
+}
 
+#Nav {
+    background-color: lightblue;
+}
+
+#categories {
+    align-content: center;
+}
+
+.third {
+    width: 60%;
+    min-height: 80%;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+#header {
+    margin-top: 26px;
+}
+
+@media (max-width: 600px) {
+    #navBarMotto {
+        font-size: small;
+    }
+}
+
+@media (max-width: 500px) {
+    #navBarMotto {
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 400px) {
+    #navBarMotto {
+        font-size: xx-small;
+    }
+}

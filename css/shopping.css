@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(250, 246, 241);
+}
+
+.menu {
+    color: teal;
+}
+
+/* #navBarMotto .menu {
+    color: rgb(0, 106, 177);
+} */
+
+.card {
+    padding-top: 10px;
+    
+}
+
+#Nav {
+    background-color: lightblue;
+}
+
+@media (max-width: 600px) {
+    #navBarMotto {
+        font-size: small;
+    }
+}
+
+@media (max-width: 500px) {
+    #navBarMotto {
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 400px) {
+    #navBarMotto {
+        font-size: xx-small;
+    }
+}

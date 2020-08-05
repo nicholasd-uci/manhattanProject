@@ -1,7 +1,54 @@
 body {
-    background-color: rgba(0, 131, 131, 0.658);
+    background-color: rgb(250, 246, 241);
 }
 
 .menu {
-    color: teal;
+    color: rgb(0, 106, 177);
+}
+
+.card {
+    max-width: 100%;
+}
+
+#Nav {
+    background-color: lightblue;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#about {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+#searchbar {
+    margin: 20px;
+}
+
+.brand {
+    color: rgb(0, 106, 177)
+}
+
+@media (max-width: 600px) {
+    #navBarMotto {
+        font-size: small;
+    }
+}
+
+@media (max-width: 500px) {
+    #navBarMotto {
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 400px) {
+    #navBarMotto {
+        font-size: xx-small;
+    }
 }
