@@ -22,3 +22,7 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+#searchbar {
+    margin: 20px;
+}
