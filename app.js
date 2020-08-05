@@ -65,7 +65,7 @@ document.getElementById('search').addEventListener('click', event => {
 
     let name = document.getElementById('name').value
 
-    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=85a06dbd80b548e1822e70e6227765b4&query=${name}`)
+    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=645ce00f265642199dffbfb5a8d155ff&query=${name}`)
         .then(res => {
         console.log(res.data)
 
@@ -75,22 +75,32 @@ document.getElementById('search').addEventListener('click', event => {
             foodCard.classList.add('card')
             foodCard.innerHTML =
                 `
-                    <img class="picture" src="${res.data.results[i].image}" width="75%" height="auto">
+                    <img class="picture" src="${res.data.results[i].image}">
                         <footer>
                             <h3>${res.data.results[i].title}</h3>
                             <button id="addBtn" class="button warning">Add To- Shopping List</button>
                         </footer>
                 `
             document.getElementById('nutrition').append(foodCard)
+            let myFood = JSON.parse(localStorage.getItem('myFood')) || []
             // let imageEle = document.createElement('img')
             // imageEle.setAttribute('src', `${res.data.results[i].image}`)
             // imageEle.classList.add('image')
             // document.getElementById('nutrition').append(imageEle)
-            axios.get(`https://api.spoonacular.com/recipes/${res.data.results[i].id}/information?apiKey=85a06dbd80b548e1822e70e6227765b4&includeNutrition=true`)
+            axios.get(`https://api.spoonacular.com/recipes/${res.data.results[i].id}/information?apiKey=645ce00f265642199dffbfb5a8d155ff&includeNutrition=true`)
                 .then(res =>{
                 console.log(res.data)
             })
         }
     })
     .catch(err => { console.log(err) })
+})
+
+
+// click button 
+document.addEventListener('click', event => {
+    if (event.target.id === 'addBtn') {
+        console.log(event.target.parentNode.childNodes[1].textContent)
+
+    }
 })
