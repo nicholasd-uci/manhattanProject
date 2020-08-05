@@ -49,22 +49,48 @@ function nutritionInfo(searchedThingy) {
 }
 
 
-// Testing indepth food search
+  `<article class="card">
+  <img class="picture" src="./2020-08-04 (2).png" width="75%" height="auto">
+  <footer>
+      <h3>Food List 3</h3>
+      <button id="addBtn" class="button warning">Add To- Shopping List</button>
+  </footer>
+</article>
+`
+
+
+// Maxwell code
 document.getElementById('search').addEventListener('click', event => {
     event.preventDefault()
 
     let name = document.getElementById('name').value
 
-    axios.get(`https://api.spoonacular.com/recipes/random?apiKey=85a06dbd80b548e1822e70e6227765b4&query=${name}`)
+    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=85a06dbd80b548e1822e70e6227765b4&query=${name}`)
         .then(res => {
-            console.log('spoonacular by nutrients')
-            console.log(res.data)
+        console.log(res.data)
 
-            document.getElementById('nutrition').innerHTML = `
-                <img src = ${res.data.results[0].image} >
-        
-            `
 
+        for (let i=0; i<10; i++) {
+            let foodCard = document.createElement('article')
+            foodCard.classList.add('card')
+            foodCard.innerHTML =
+                `
+                    <img class="picture" src="${res.data.results[i].image}" width="75%" height="auto">
+                        <footer>
+                            <h3>${res.data.results[i].title}</h3>
+                            <button id="addBtn" class="button warning">Add To- Shopping List</button>
+                        </footer>
+                `
+            document.getElementById('nutrition').append(foodCard)
+            // let imageEle = document.createElement('img')
+            // imageEle.setAttribute('src', `${res.data.results[i].image}`)
+            // imageEle.classList.add('image')
+            // document.getElementById('nutrition').append(imageEle)
+            axios.get(`https://api.spoonacular.com/recipes/${res.data.results[i].id}/information?apiKey=85a06dbd80b548e1822e70e6227765b4&includeNutrition=true`)
+                .then(res =>{
+                console.log(res.data)
+            })
+        }
     })
     .catch(err => { console.log(err) })
-  })
+})
