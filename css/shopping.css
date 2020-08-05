@@ -1,13 +1,22 @@
 body {
-    background-color: rgb(0, 106, 177);
+    background-color: rgb(250, 246, 241);
 }
 
-#navBarMotto .menu {
-    color: rgb(0, 106, 177);
+.menu {
+    color: teal;
 }
+
+/* #navBarMotto .menu {
+    color: rgb(0, 106, 177);
+} */
 
 .card {
     padding-top: 10px;
+    
+}
+
+#Nav {
+    background-color: lightblue;
 }
 
 @media (max-width: 600px) {
