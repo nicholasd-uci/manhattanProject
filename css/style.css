@@ -35,11 +35,6 @@ img {
     color: rgb(0, 106, 177)
 }
 
-#footer {
-    position: absolute;
-    bottom: 0;
-}
-
 @media (max-width: 600px) {
     #navBarMotto {
         font-size: small;
