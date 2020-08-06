@@ -87,21 +87,33 @@
                 &copy; NutraPrep</p>
         </footer>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- <script src="./Assets/js/index.js"></script> -->
     <script>
-        var quote = fetch("https://type.fit/api/quotes")
-                .then(function (response) {
-                    let i = Math.floor(Math.random() * response.length)
-                    // console.log(response[i])
-                    return response.json();
-                })
-                .catch(function (data) {
-                    console.log(data);
-                });
-            console.log(quote)
+        // var quote = fetch("https://type.fit/api/quotes")
+        //         .then(function (response) {
+        //             let i = Math.floor(Math.random() * response.length)
+        //             // console.log(response[i])
+        //             return response.json();
+        //         })
+        //         .catch(function (data) {
+        //             console.log(data);
+        //         });
         // document.getElementById("quote").innerHTML = `${quote}`
-    </script>
+         function quote() {
+            axios.get("https://type.fit/api/quotes")
+            .then(result=>{
+                let quote = result.data
+                console.log(quote)
+                let i = Math.floor(Math.random() * quote.length)
+                console.log(quote[i])
+                document.getElementById("quote").innerHTML = `${quote[i].text} - ${quote[i].author}`
+            }) 
+            .catch(quoteError => {console.log(quoteError)}
+            ) 
+        } 
+        quote()
+    </script>  
 </body>
 
 </html>
