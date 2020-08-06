@@ -45,10 +45,40 @@ document.addEventListener('click', event => {
                 }
 
             })
-            
+
             .catch(foodDetailError => {
                 console.log('food details error')
                 console.log(foodDetailError)
             })
     }
 })
+
+
+// Function for random food recipe
+function randomRecipe() {
+
+    axios.get(`https://api.spoonacular.com/recipes/random?apiKey=645ce00f265642199dffbfb5a8d155ff&number=5`)
+        .then(res => {
+            let randomRecipe = res.data.recipes
+            console.log(randomRecipe)
+
+            for (let i = 0; i <= 4; i++) {
+                let foodCard = document.getElementById(`foodItem${i + 1}`)
+                foodCard.innerHTML =
+                    `
+                    <img class="picture" src="${randomRecipe[i].image}">
+                        <footer>
+                            <h3 data-food-id="${randomRecipe[i].id}">${randomRecipe[i].title}</h3>
+                            <button id="addBtn" class="button warning">More Info</button>
+                        </footer>
+                `
+            }
+        })
+
+        // console log error in first search
+        .catch(randomError => {
+            console.log(randomError)
+        })
+}
+// Run random recipe at start of page
+randomRecipe()
