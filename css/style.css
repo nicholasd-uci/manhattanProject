@@ -25,6 +25,10 @@ body {
     background-color: lightblue;
 }
 
+#quote {
+    text-align: center;
+}
+
 img {
     max-width: 35%;
     height: auto;  

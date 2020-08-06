@@ -11,7 +11,8 @@ document.getElementById('search').addEventListener('click', event => {
             // Loop 5 times to show images on cards
             for (let i = 0; i <= 4; i++) {
                 let foodCard = document.getElementById(`foodItem${i + 1}`)
-                foodCard.innerHTML =
+                if (res.data.results[i].image !== undefined) {
+                    foodCard.innerHTML =
                     `
                     <img class="picture" src="${res.data.results[i].image}">
                         <footer>
@@ -19,35 +20,51 @@ document.getElementById('search').addEventListener('click', event => {
                             <button id="addBtn" class="button warning">More Info</button>
                         </footer>
                 `
-
+                }
+                else {
+                    foodCard.innerHTML =
+                    `
+                    <img class="picture" src="../img/2020-08-04 (2).png">
+                        <footer>
+                            <h3 data-food-id="${res.data.results[i].id}">${res.data.results[i].title}</h3>
+                            <button id="addBtn" class="button warning">More Info</button>
+                        </footer>
+                `
+                }
             }
         })
         // console log error in first search
         .catch(err => { console.log(err) })
 })
 
-// click button 
+// click button
 document.addEventListener('click', event => {
     if (event.target.id === 'addBtn') {
         console.log(event.target.parentNode.childNodes[1].textContent)
 
         let foodItemId = event.target.parentNode.childNodes[1].getAttribute('data-food-id')
         console.log(foodItemId)
-        axios.get(`https://api.spoonacular.com/recipes/${foodItemId}/information?apiKey=645ce00f265642199dffbfb5a8d155ff&includeNutrition=true`)
+        axios.get(`https://api.spoonacular.com/recipes/${foodItemId}/information?apiKey=85a06dbd80b548e1822e70e6227765b4&includeNutrition=true`)
             .then(res => {
                 console.log(res.data)
                 let nutritionList = res.data.nutrition.nutrients
                 console.log(nutritionList)
-                for (let i = 0; i < nutritionList.length; i++) {
-                    let nutritionElem = document.createElement('li')
-                    nutritionElem.innerHTML = `${nutritionList[i].title}: ${nutritionList[i].amount}: ${nutritionList[i].unit}`
-                    document.getElementById('nutritionList').append(nutritionElem)
+                if (document.getElementById('nutritionTable').classList.contains('tableDisplay') === true) {
+                    document.getElementById('nutritionTable').classList.remove('tableDisplay')
+                    console.log('class removed')
                 }
-
+                document.getElementById('nutritionTableData').innerHTML = ''
+                for (let i = 0; i <= 9; i++) {
+                    let nutritionTableRow = document.createElement('tr')
+                    nutritionTableRow.innerHTML = `
+                        <td>${nutritionList[i].title}</td>
+                        <td>${nutritionList[i].amount} ${nutritionList[i].unit}</td>
+                    `
+                    document.getElementById('nutritionTableData').append(nutritionTableRow)
+                }
+                
             })
-
             .catch(foodDetailError => {
-                console.log('food details error')
                 console.log(foodDetailError)
             })
     }
@@ -57,7 +74,7 @@ document.addEventListener('click', event => {
 // Function for random food recipe
 function randomRecipe() {
 
-    axios.get(`https://api.spoonacular.com/recipes/random?apiKey=645ce00f265642199dffbfb5a8d155ff&number=5`)
+    axios.get(`https://api.spoonacular.com/recipes/random?apiKey=85a06dbd80b548e1822e70e6227765b4&number=5`)
         .then(res => {
             let randomRecipe = res.data.recipes
             console.log(randomRecipe)
