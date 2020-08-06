@@ -56,6 +56,10 @@ document.addEventListener('click', event => {
         axios.get(`https://api.spoonacular.com/recipes/${foodItemId}/information?apiKey=85a06dbd80b548e1822e70e6227765b4&includeNutrition=true`)
             .then(res => {
                 console.log(res.data)
+                if (document.getElementById('nutritionTable').classList.contains('tableDisplay') === true) {
+                    document.getElementById('nutritionTable').classList.remove('tableDisplay')
+                    console.log('class removed')
+                }
                 let nutritionList = res.data.nutrition.nutrients
                 console.log(nutritionList)
                 document.getElementById('recipesTableData').innerHTML = ''
@@ -65,7 +69,7 @@ document.addEventListener('click', event => {
                         <td>${nutritionList[i].title}</td>
                         <td>${nutritionList[i].amount} ${nutritionList[i].unit}</td>
                     `
-                    document.getElementById('recipesTableData').append(nutritionTableRow)
+                    document.getElementById('nutritionTableData').append(nutritionTableRow)
                 }
 
             })

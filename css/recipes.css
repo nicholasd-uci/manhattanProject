@@ -6,6 +6,10 @@ body {
     background-color: rgb(250, 246, 241);
 }
 
+.tableDisplay {
+    display: none;
+}
+
 .menu {
     color: lightblue;
 }
