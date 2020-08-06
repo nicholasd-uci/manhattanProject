@@ -53,25 +53,23 @@ img {
     color: rgb(0, 106, 177)
 }
 
-h2 {
-    background-color: lightblue;
+h1 {
+    background-color: rgb(250, 246, 241);
 }
 
 header {
     text-align: center;
 }
 
-@media (max-width: 600px) {
-   
+.motto {
+    background-color: lightblue;
 }
 
-@media (max-width: 500px) {
- 
-}
+@media (max-width: 600px) {}
 
-@media (max-width: 400px) {
-   
-}
+@media (max-width: 500px) {}
+
+@media (max-width: 400px) {}
 
 #footer {
     position: static;
