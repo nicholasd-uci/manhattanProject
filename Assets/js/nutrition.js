@@ -49,6 +49,10 @@ document.addEventListener('click', event => {
                 console.log(res.data)
                 let nutritionList = res.data.nutrition.nutrients
                 console.log(nutritionList)
+                if (document.getElementById('nutritionTable').classList.contains('tableDisplay') === true) {
+                    document.getElementById('nutritionTable').classList.remove('tableDisplay')
+                    console.log('class removed')
+                }
                 document.getElementById('nutritionTableData').innerHTML = ''
                 for (let i = 0; i <= 9; i++) {
                     let nutritionTableRow = document.createElement('tr')
