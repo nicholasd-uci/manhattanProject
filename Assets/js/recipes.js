@@ -1,5 +1,5 @@
 function showImage(catagory) {
-    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=85a06dbd80b548e1822e70e6227765b4&query=${catagory}&maxSugar=100&number=5`)
+    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=543a2b7adaa0420aa481ac6e6fd18c3b&query=${catagory}&maxSugar=100&number=5`)
         .then(res => {
             console.log(res.data)
 
@@ -53,7 +53,7 @@ document.addEventListener('click', event => {
 
         let foodItemId = event.target.parentNode.childNodes[1].getAttribute('data-food-id')
         console.log(foodItemId)
-        axios.get(`https://api.spoonacular.com/recipes/${foodItemId}/information?apiKey=85a06dbd80b548e1822e70e6227765b4&includeNutrition=true`)
+        axios.get(`https://api.spoonacular.com/recipes/${foodItemId}/information?apiKey=543a2b7adaa0420aa481ac6e6fd18c3b&includeNutrition=true`)
             .then(res => {
                 console.log(res.data)
                 if (document.getElementById('nutritionTable').classList.contains('tableDisplay') === true) {
