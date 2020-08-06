@@ -7,15 +7,15 @@ ____________________________________________________
  `` Just search for what you are looking for and let NutraPrep do the rest.``
 ____________________________________________________
 **Usage**
-This application is using Axios request to access a database full of information about nutrition and how to make recipes. 
+This application is using Axios request to access a database full of information about nutritions and how to make recipes. 
 *spoonacular API Database*
 
 **Licensing**
 &copy; NutraPrep Dream Team
 
 **All Rights Reserved:**
-*Marcella Ash*
-*David Viramontes*
-*Maxwell Yang*
-*Makoto Asahi*
+*Marcella Ash,*
+*David Viramontes,*
+*Maxwell Yang,*
+*Makoto Asahi &*
 *Nicholas Dallas*
