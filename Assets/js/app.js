@@ -6,16 +6,15 @@ document.getElementById('search').addEventListener('click', event => {
 
     axios.get(`https://api.nal.usda.gov/fdc/v1/foods/search?api_key=ckuDCJZTvGODnGVYDC4FTRlLhXJhmjEtg3slZV4Z&query=${name}`)
         .then(res => {
-            console.log('usda food data for nutrition')
-            console.log(res.data)
-            nutritionInfo(res.data)
+        console.log(res.data)
 
     })
     .catch(err => { console.log(err) })
-  })
+})
 
 
-  document.getElementById('search').addEventListener('click', event => {
+
+document.getElementById('search').addEventListener('click', event => {
     event.preventDefault()
 
     let name = document.getElementById('name').value
@@ -24,15 +23,21 @@ document.getElementById('search').addEventListener('click', event => {
         .then(res => {
             console.log('spoonacular for image')
             console.log(res.data)
-
-            document.getElementById('nutrition').innerHTML = `
-                <img src = ${res.data.results[0].image} >
         
-            `
 
+        for (let i=0; i<10; i++) {
+            let imageEle = document.createElement('img')
+            imageEle.setAttribute('src', `${res.data.results[i].image}`)
+            imageEle.classList.add('image')
+            document.getElementById('nutrition').append(imageEle)
+            axios.get(`https://api.spoonacular.com/recipes/${res.data.results[i].id}/information?apiKey=85a06dbd80b548e1822e70e6227765b4&includeNutrition=true`)
+                .then(res =>{
+                console.log(res.data)    
+            })
+        }
     })
     .catch(err => { console.log(err) })
-  })
+})
 
 
 // Write food nutrient data to page
