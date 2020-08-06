@@ -70,5 +70,21 @@ header {
 }
 
 @media (max-width: 400px) {
+<<<<<<< HEAD
   
+=======
+    #navBarMotto {
+        font-size: xx-small;
+    }
+}
+
+#footer {
+    position: static;
+    font-size: large;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: orangered;
+    text-align: center;
+>>>>>>> 9aef12c881df07b8bb4e51e57e3ce2b56e7b0d93
 }

@@ -70,11 +70,10 @@ input {
 
 #footer {
     position: static;
-    font-size: x-large;
+    font-size: large;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: lightblue;
     color: orangered;
     text-align: center;
 }
