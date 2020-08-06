@@ -72,3 +72,13 @@ header {
 @media (max-width: 400px) {
   
 }
+
+#footer {
+    position: static;
+    font-size: large;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: orangered;
+    text-align: center;
+}
