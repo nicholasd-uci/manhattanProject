@@ -34,7 +34,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: 60%;
 }
 
 #about {
@@ -45,6 +45,10 @@ img {
     height: auto;
 }
 
+.motto {
+    text-align: center;
+}
+
 #searchbar {
     margin: 20px;
 }
@@ -53,40 +57,23 @@ img {
     color: rgb(0, 106, 177)
 }
 
-h2 {
-    background-color: lightblue;
+h1 {
+    background-color: rgb(250, 246, 241);
 }
 
 header {
     text-align: center;
 }
 
-#quote{
-    text-align: center;
+.motto {
+    background-color: lightblue;
 }
 
-.image {
-    height: auto;
-    width: auto;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    margin: 10px;
-}
+@media (max-width: 600px) {}
 
-@media (max-width: 600px) {
-   
-}
+@media (max-width: 500px) {}
 
-@media (max-width: 500px) {
- 
-}
-
-@media (max-width: 400px) {
-   
-}
+@media (max-width: 400px) {}
 
 #footer {
     position: static;

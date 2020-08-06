@@ -37,10 +37,16 @@
             </nav>
            
         </div>
-        <header>
-            <h2>Nutrition + Preperation = No Problem</h2>
-        </header>
-        <h3 id="quote">This is where the quote will go from Sun Tzu</h3>
+        <article id="header" class="card">
+            <header>
+                <h1>Home</h1>
+                <br>
+            </header>
+            <footer class="motto">
+                <p>Nutrition + Preperation = No Problem</p>
+            </footer>
+        </article>
+        <h3 id="quote">This is where the quote will go</h3>
         <div>
             <div id="about" class="card">
                 <div id="logo">
@@ -81,8 +87,33 @@
                 &copy; NutraPrep</p>
         </footer>
     </div>
-
-    <script src="./Assets/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- <script src="./Assets/js/index.js"></script> -->
+    <script>
+        // var quote = fetch("https://type.fit/api/quotes")
+        //         .then(function (response) {
+        //             let i = Math.floor(Math.random() * response.length)
+        //             // console.log(response[i])
+        //             return response.json();
+        //         })
+        //         .catch(function (data) {
+        //             console.log(data);
+        //         });
+        // document.getElementById("quote").innerHTML = `${quote}`
+         function quote() {
+            axios.get("https://type.fit/api/quotes")
+            .then(result=>{
+                let quote = result.data
+                console.log(quote)
+                let i = Math.floor(Math.random() * quote.length)
+                console.log(quote[i])
+                document.getElementById("quote").innerHTML = `${quote[i].text} - ${quote[i].author}`
+            }) 
+            .catch(quoteError => {console.log(quoteError)}
+            ) 
+        } 
+        quote()
+    </script>  
 </body>
 
 </html>

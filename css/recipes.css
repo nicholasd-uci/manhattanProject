@@ -11,8 +11,11 @@ body {
 }
 
 .card {
-    background-color: lightblue;
+    background-color: rgb(250, 246, 241);
     text-align: center;
+}
+.about {
+    background-color: lightblue;
 }
 
 #Nav {
@@ -43,9 +46,7 @@ body {
 }
 
 @media (max-width: 400px) {
-    #navBarMotto {
-        font-size: xx-small;
-    }
+    
 }
 
 #footer {
