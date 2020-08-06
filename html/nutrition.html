@@ -7,8 +7,8 @@
     <title>NutraPrep</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
     <link rel="stylesheet" href="../css/nutrition.css">
-    <link rel="icon" href='../Assets/img/faviconLogo.ico'>
-
+    <link rel="icon" href='../Assets/faviconLogo.ico'>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,27 +16,38 @@
     <div id="header">NutraPrep</div>
 
     <div id="container">
-        <div style="overflow: hidden;height: 150px;">
+        <div style="overflow: hidden;height: 15px;">
             <!-- For Demo, Represents the body -->
             <nav id="Nav" class="nav">
                 <a class="brand">
                     <img class="logo" src="../Assets/img/2020-08-04 (2).png" />
-                    <span id="navBarMotto">NutraPrep: Nutrition + Preperation = No Problem</span>
+                    <span id="navBarMotto">NutraPrep</span>
                 </a>
 
                 <!-- responsive-->
                 <input id="bmenub" type="checkbox" class="show">
-                <label for="bmenub" class="burger pseudo button">menu</label>
+                <label for="bmenub" class="burger pseudo button">Menu</label>
 
                 <div class="menu">
                     <a href="../index.html" class="button warning">Home</a>
                     <a href="nutrition.html" class="button warning">Nutrition</a>
                     <a href="./recipes.html" class="button warning">Recipes</a>
-                    <a href="./shopping.html" class="button warning">Shopping List</a>
+                    <!-- <a href="./shopping.html" class="button warning">Shopping List</a> -->
                 </div>
             </nav>
         </div>
     </div>
+
+    <container class="card">
+        <header>
+            <h2>Nutrition</h2>
+            <br>
+            <h4>Nutrition + Preperation = No Problem</h4>
+        </header>
+        <div id="nutriAbout">
+            <p>Search for a food to find out it's nutritional value, or check out one of the five randomly generated foods!</p>
+        </div>
+    </container>
 
     <div class="flex demo">
         <div>
@@ -47,16 +58,28 @@
                 </fieldset>
                 <button id="search" class="button warning">search</button>
             </span>   
+<<<<<<< HEAD
       <br> 
             <table id="nutritionList" class="primary tableDisplay">
                 <thead  id="nutritionList">
+=======
+        </div>
+    <br>    
+        <div class="nutrition info"
+            <table id="nutritionTable" class="primary tableDisplay">
+                <thead id="nutritionTableHead">
+>>>>>>> f35e922fba09344f20badbb5bfaff92e04d0ae54
                     <tr>
                         <th>Nutrients</th>
                         <th>Servings</th>
                     </tr>
                 </thead>
+<<<<<<< HEAD
                 <tbody>
                     <!-- nutra data will populate -->
+=======
+                <tbody id="nutritionTableData">
+>>>>>>> f35e922fba09344f20badbb5bfaff92e04d0ae54
                 </tbody>
             </table>
         </div>

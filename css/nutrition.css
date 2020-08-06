@@ -1,3 +1,7 @@
+* {
+    font-family: 'Karla', sans-serif;
+}
+
 body {
     background-color: rgb(250, 246, 241);
 }
@@ -10,11 +14,10 @@ body {
 .logo {
     width: 75px;
     height: 100px;
-    
 }
+
 .card {
     background-color: lightblue;
-    border: solid orangered 2px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -22,9 +25,13 @@ body {
 
 .picture {
     width: 350px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tableDisplay {
+    display: none
 }
 
 #nutritionList { 
@@ -48,7 +55,6 @@ h3 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 label {
@@ -64,36 +70,47 @@ input {
 }
 
 #search {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #footer {
     position: static;
-    font-size: x-large;
+    font-size: large;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: lightblue;
     color: orangered;
     text-align: center;
-  }
+}
 
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 50%;
-    }
-  }
+header {
+    text-align: center;
+}
 
-  @media screen and (max-width: 500px) {
-    .column {
-      width: 50%;
-    }
-  }
+container {
+    background-color: lightblue;
+}
 
-  @media screen and (max-width: 350px) {
+#nutriAbout {
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
     .column {
-      width: 50%;
+        width: 50%;
     }
-  }
+}
+
+@media screen and (max-width: 500px) {
+    .column {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .column {
+        width: 50%;
+    }
+}

@@ -1,3 +1,14 @@
+* {
+    /* margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent; */
+    font-family: 'Karla', sans-serif;
+}
+
 body {
     background-color: rgb(250, 246, 241);
 }
@@ -19,6 +30,13 @@ img {
     height: auto;
 }
 
+#nutraLogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
 #about {
     margin-left: 20px;
     margin-right: 20px;
@@ -35,20 +53,32 @@ img {
     color: rgb(0, 106, 177)
 }
 
+h2 {
+    background-color: lightblue;
+}
+
+header {
+    text-align: center;
+}
+
 @media (max-width: 600px) {
-    #navBarMotto {
-        font-size: small;
-    }
+   
 }
 
 @media (max-width: 500px) {
-    #navBarMotto {
-        font-size: x-small;
-    }
+ 
 }
 
 @media (max-width: 400px) {
-    #navBarMotto {
-        font-size: xx-small;
-    }
+   
+}
+
+#footer {
+    position: static;
+    font-size: large;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: orangered;
+    text-align: center;
 }
