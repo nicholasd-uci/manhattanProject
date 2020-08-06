@@ -65,17 +65,8 @@ header {
     text-align: center;
 }
 
-<<<<<<< HEAD
 .motto {
     background-color: lightblue;
-=======
-#quote{
-    text-align: center;
-}
-
-@media (max-width: 600px) {
-   
->>>>>>> 2269e1beeac85da0e7d6b6a641d4672e4774ac0b
 }
 
 @media (max-width: 600px) {}
