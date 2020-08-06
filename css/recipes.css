@@ -35,19 +35,13 @@ body {
 }
 
 @media (max-width: 600px) {
-    #navBarMotto {
-        font-size: small;
-    }
+
 }
 
 @media (max-width: 500px) {
-    #navBarMotto {
-        font-size: x-small;
-    }
+
 }
 
 @media (max-width: 400px) {
-    #navBarMotto {
-        font-size: xx-small;
-    }
+
 }
