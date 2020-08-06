@@ -33,6 +33,10 @@ body {
   margin-bottom: 15px;
 }
 
+.tableDisplay {
+  display: none;
+}
+
 
 #addBtn {
     display: block;
