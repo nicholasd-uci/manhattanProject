@@ -7,7 +7,7 @@
     <title>NutraPrep</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
     <link rel="stylesheet" href="../css/nutrition.css">
-    <link rel="icon" href='../Assets/faviconLogo.ico'>
+    <link rel="icon" href='../Assets/img/faviconLogo.ico'>
 
 </head>
 
@@ -20,7 +20,7 @@
             <!-- For Demo, Represents the body -->
             <nav id="Nav" class="nav">
                 <a class="brand">
-                    <img class="logo" src="../Assets/2020-08-04 (2).png" />
+                    <img class="logo" src="../Assets/img/2020-08-04 (2).png" />
                     <span id="navBarMotto">NutraPrep: Nutrition + Preperation = No Problem</span>
                 </a>
 
@@ -40,13 +40,13 @@
 
     <div class="flex demo">
         <div>
-
-            <fieldset class="flex two">
-                <h3>NutraPrep Search Tool</h3>
-                <label><input type="search" placeholder="What foods are you looking for?"></label>
-            </fieldset>
-            <button id="search" class="button warning">search</button>
-
+            <span>
+                <fieldset class="flex two">
+                    <h3>NutraPrep Search Tool</h3>
+                    <label><input id="foodSearch" type="search" placeholder="What foods are you looking for?"></label>
+                </fieldset>
+                <button id="search" class="button warning">search</button>
+            </span>
         </div>
 
         <div class="flexContainer">
@@ -63,53 +63,91 @@
                 </div>
                 <div>
                     <div>
-                        <article class="card">
-                            <img class="picture" src="../Assets/img/2020-08-04 (2).png" width="75%" height="auto">
-                            <footer>
-                                <h3>Food List 2</h3>
-                                <button id="addBtn" class="button warning">Add To- Shopping List</button>
-                            </footer>
-                        </article>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <article class="card">
-                            <img class="picture" src="../Assets/img/2020-08-04 (2).png" width="75%" height="auto">
-                            <footer>
-                                <h3>Food List 3</h3>
-                                <button id="addBtn" class="button warning">Add To- Shopping List</button>
-                            </footer>
-                        </article>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <div>
-                            <article class="card">
-                                <img class="picture" src="../Assets/img/2020-08-04 (2).png" width="75%" height="auto">
+                        <span>
+                            <article id="foodItem1" class="card">
+                                <img class="picture" src="../Assets/img/2020-08-04 (2).png">
                                 <footer>
-                                    <h3>Food List 3</h3>
-                                    <button id="addBtn" class="button warning">Add To- Shopping
-                                        List</button>
+                                    <h3>Food List 1</h3>
+                                    <button id="addBtn" class="button warning">More Info</button>
                                 </footer>
                             </article>
                         </div>
                     </div>
-                </div>
+                    <div>
+                        <span>
+                            <div>
+                                <span>
+                                    <article id="foodItem2" class="card">
+                                        <img class="picture" src="../Assets/img/2020-08-04 (2).png" width="75%"
+                                            height="auto">
+                                        <footer>
+                                            <h3>Food List 2</h3>
+                                            <button id="addBtn" class="button warning">More Info</button>
+                                        </footer>
+                                    </article>
+                                </span>
+                            </div>
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            <div>
+                                <span>
+                                    <article id="foodItem3" class="card">
+                                        <img class="picture" src="../Assets/img/2020-08-04 (2).png" width="75%"
+                                            height="auto">
+                                        <footer>
+                                            <h3>Food List 3</h3>
+                                            <button id="addBtn" class="button warning">More Info</button>
+                                        </footer>
+                                    </article>
+                                </span>
+                            </div>
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            <div>
+                                <span>
+                                    <div>
+                                        <span>
+                                            <article id="foodItem4" class="card">
+                                                <img class="picture" src="../Assets/img/2020-08-04 (2).png" width="75%"
+                                                    height="auto">
+                                                <footer>
+                                                    <h3>Food List 3</h3>
+                                                    <button id="addBtn" class="button warning">Add To- Shopping
+                                                        List</button>
+                                                </footer>
+                                            </article>
+                                        </span>
+                                    </div>
+                                </span>
+                            </div>
+                        </span>
+                    </div>
 
                 <div>
                     <div>
-                        <div>
-                            <article class="card">
-                                <img class="picture" src="../Assets/img/2020-08-04 (2).png" width="75%" height="auto">
-                                <footer>
-                                    <h3>Food List 3</h3>
-                                    <button id="addBtn" class="button warning">Add To- Shopping
-                                        List</button>
-                                </footer>
-                            </article>
-                        </div>
+                        <span>
+                            <div>
+                                <span>
+                                    <div>
+                                        <span>
+                                            <article id="foodItem5" class="card">
+                                                <img class="picture" src="../Assets/img/2020-08-04 (2).png" width="75%"
+                                                    height="auto">
+                                                <footer>
+                                                    <h3>Food List 3</h3>
+                                                    <button id="addBtn" class="button warning">Add To- Shopping
+                                                        List</button>
+                                                </footer>
+                                            </article>
+                                        </span>
+                                    </div>
+                                </span>
+                            </div>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -124,6 +162,8 @@
             </footer>
         </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script src="../Assets/js/nutrition.js"></script>
 </body>

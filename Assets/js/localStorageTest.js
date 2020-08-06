@@ -39,3 +39,5 @@ document.getElementById('submitPantry').addEventListener('click', function () {
 })
 
 listPantryItems()
+
+
