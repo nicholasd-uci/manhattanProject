@@ -11,6 +11,9 @@ body {
     background-color: lightblue;
 }
 
+.about{
+    background-color: rgb(250, 246, 241);
+}
 .logo {
     width: 75px;
     height: 100px;
