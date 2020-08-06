@@ -88,17 +88,17 @@
         </footer>
     </div>
 
-    <script src="./Assets/js/index.js"></script>
+    <!-- <script src="./Assets/js/index.js"></script> -->
     <script>
         var quote = fetch("https://type.fit/api/quotes")
                 .then(function (response) {
+                    let i = Math.floor(Math.random() * response.length)
+                    // console.log(response[i])
                     return response.json();
                 })
-                .then(function (data) {
+                .catch(function (data) {
                     console.log(data);
                 });
-            [Math.floor(Math.random() * quote.length)
-            ];
             console.log(quote)
         document.getElementById("quote").innerHTML = `${quote}`
     </script>
