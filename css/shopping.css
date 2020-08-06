@@ -36,7 +36,6 @@ body {
 }
 
 @media (max-width: 400px) {
-<<<<<<< HEAD
     #navBarMotto {
         font-size: xx-small;
     }
@@ -50,6 +49,4 @@ body {
     width: 100%;
     color: orangered;
     text-align: center;
-=======
->>>>>>> 672a8417245165b547bb43db06826caeeeb0ce7b
 }
