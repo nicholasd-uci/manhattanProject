@@ -1,3 +1,7 @@
+* {
+    font-family: 'Karla', sans-serif;
+}
+
 body {
     background-color: rgb(250, 246, 241);
 }
@@ -17,8 +21,8 @@ body {
 .logo {
     width: 75px;
     height: 100px;
-    
 }
+
 .card {
     background-color: lightblue;
     border: solid orangered 2px;
@@ -29,14 +33,12 @@ body {
 
 .picture {
     width: 350px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#flexContainer {
-    
-}
+#flexContainer {}
 
 #addBtn {
     display: block;
@@ -48,7 +50,6 @@ h3 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 label {
@@ -64,9 +65,9 @@ input {
 }
 
 #search {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #footer {
@@ -78,22 +79,22 @@ input {
     background-color: lightblue;
     color: orangered;
     text-align: center;
-  }
+}
 
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .column {
-      width: 50%;
+        width: 50%;
     }
-  }
+}
 
-  @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
     .column {
-      width: 50%;
+        width: 50%;
     }
-  }
+}
 
-  @media screen and (max-width: 350px) {
+@media screen and (max-width: 350px) {
     .column {
-      width: 50%;
+        width: 50%;
     }
-  }
+}

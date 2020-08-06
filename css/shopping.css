@@ -1,3 +1,7 @@
+* {
+    font-family: 'Karla', sans-serif;
+}
+
 body {
     background-color: rgb(250, 246, 241);
 }
@@ -12,7 +16,6 @@ body {
 
 .card {
     padding-top: 10px;
-    
 }
 
 #Nav {
