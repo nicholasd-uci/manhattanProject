@@ -33,3 +33,11 @@ document.getElementById('search').addEventListener('click', event => {
     // console log error in first search
     .catch(err => { console.log(err) })
 })
+
+// click button 
+document.addEventListener('click', event => {
+    if (event.target.id === 'addBtn') {
+        console.log(event.target.parentNode.childNodes[1].textContent)
+
+    }
+})
