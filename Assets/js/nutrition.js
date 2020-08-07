@@ -54,6 +54,7 @@ document.addEventListener('click', event => {
                     console.log('class removed')
                 }
                 document.getElementById('nutritionTableData').innerHTML = ''
+                document.getElementById('foodTitle').innerHTML = res.data.title
                 for (let i = 0; i <= 9; i++) {
                     let nutritionTableRow = document.createElement('tr')
                     nutritionTableRow.innerHTML = `
