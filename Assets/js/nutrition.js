@@ -19,7 +19,7 @@ document.getElementById('search').addEventListener('click', event => {
                             <h3 data-food-id="${res.data.results[i].id}">${res.data.results[i].title}</h3>
                             <button id="addBtn" class="button warning">More Info</button>
                         </footer>
-                `
+                    `
                 }
                 else {
                     foodCard.innerHTML =

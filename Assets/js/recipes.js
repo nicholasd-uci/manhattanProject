@@ -5,13 +5,30 @@ function showImage(catagory) {
 
             for (let i = 0; i < 5; i++) {
                 let foodCard = document.getElementById(`foodItem${i + 1}`)
-                foodCard.innerHTML = `
+                // foodCard.innerHTML = `
+                //     <img class="picture" src="${res.data.results[i].image}">
+                //     <footer>
+                //         <h3 data-food-id="${res.data.results[i].id}">${res.data.results[i].title}</h3>
+                //         <button id="addBtn" class="button warning">More Info</button>
+                //     </footer>                     
+                // `
+                if (res.data.results[i].image !== undefined) {
+                    foodCard.innerHTML = `
                     <img class="picture" src="${res.data.results[i].image}">
                     <footer>
                         <h3 data-food-id="${res.data.results[i].id}">${res.data.results[i].title}</h3>
                         <button id="addBtn" class="button warning">More Info</button>
                     </footer>                     
                 `
+                } else {
+                    foodCard.innerHTML = `
+                    <img class="picture" src="../img/2020-08-04 (2).png">
+                    <footer>
+                        <h3 data-food-id="${res.data.results[i].id}">${res.data.results[i].title}</h3>
+                        <button id="addBtn" class="button warning">More Info</button>
+                    </footer>                     
+                `
+                }
             }
         })
         .catch(err => { console.log(err) })
@@ -62,7 +79,8 @@ document.addEventListener('click', event => {
                 }
                 let nutritionList = res.data.nutrition.nutrients
                 console.log(nutritionList)
-                document.getElementById('recipesTableData').innerHTML = ''
+                document.getElementById('nutritionTableData').innerHTML = ''
+                document.getElementById('foodTitle').innerHTML = res.data.title
                 for (let i = 0; i <= 9; i++) {
                     let nutritionTableRow = document.createElement('tr')
                     nutritionTableRow.innerHTML = `
