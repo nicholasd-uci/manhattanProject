@@ -31,7 +31,7 @@
                 <div class="menu">
                     <a href="index.html" class="button warning">Home</a>
                     <a href="./html/nutrition.html" class="button warning">Nutrition</a>
-                    <a href="./html/recipes.html" class="button warning">Recipes</a>
+                    <a href="./html/recipes.html" class="button warning">Category</a>
                     <!-- <a href="./html/shopping.html" class="button warning">Shopping List</a> -->
                 </div>
             </nav>
@@ -76,8 +76,8 @@
         </div>
         <div class="half">
             <article id="recipeTab" class="card">
-                <header>About the recipes Tab:</header>
-                <footer>This is where you'll be able to search for a recipe by an ingredient or by one of the categories provided.  You'll be able to look up a recipe that is: low carb, low sodium, low calorie, low sugar or high in protein.</footer>
+                <header>About the category Tab:</header>
+                <footer>This is where you'll be able to search for a meal by one of the categories provided.  You'll be able to look up a meal that is: low carb, low sodium, low calorie, low sugar or high in protein.</footer>
             </article>
         </div>
     </div>
@@ -90,16 +90,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- <script src="./Assets/js/index.js"></script> -->
     <script>
-        // var quote = fetch("https://type.fit/api/quotes")
-        //         .then(function (response) {
-        //             let i = Math.floor(Math.random() * response.length)
-        //             // console.log(response[i])
-        //             return response.json();
-        //         })
-        //         .catch(function (data) {
-        //             console.log(data);
-        //         });
-        // document.getElementById("quote").innerHTML = `${quote}`
          function quote() {
             axios.get("https://type.fit/api/quotes")
             .then(result=>{
