@@ -4,7 +4,7 @@ document.getElementById('search').addEventListener('click', event => {
 
     let name = document.getElementById('foodSearch').value
 
-    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=543a2b7adaa0420aa481ac6e6fd18c3b&query=${name}&number=5`)
+    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=329471d76fc144f79e282c665c95ea08&query=${name}&number=5`)
         .then(res => {
             console.log(res.data)
 
@@ -44,7 +44,7 @@ document.addEventListener('click', event => {
 
         let foodItemId = event.target.parentNode.childNodes[1].getAttribute('data-food-id')
         console.log(foodItemId)
-        axios.get(`https://api.spoonacular.com/recipes/${foodItemId}/information?apiKey=543a2b7adaa0420aa481ac6e6fd18c3b&includeNutrition=true`)
+        axios.get(`https://api.spoonacular.com/recipes/${foodItemId}/information?apiKey=329471d76fc144f79e282c665c95ea08&includeNutrition=true`)
             .then(res => {
                 console.log(res.data)
                 let nutritionList = res.data.nutrition.nutrients
@@ -75,7 +75,7 @@ document.addEventListener('click', event => {
 // Function for random food recipe
 function randomRecipe() {
 
-    axios.get(`https://api.spoonacular.com/recipes/random?apiKey=543a2b7adaa0420aa481ac6e6fd18c3b&number=5`)
+    axios.get(`https://api.spoonacular.com/recipes/random?apiKey=329471d76fc144f79e282c665c95ea08&number=5`)
         .then(res => {
             let randomRecipe = res.data.recipes
             console.log(randomRecipe)

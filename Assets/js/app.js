@@ -4,7 +4,7 @@
 
 //     let name = document.getElementById('name').value
 
-    axios.get(`https://api.nal.usda.gov/fdc/v1/foods/search?api_key=ckuDCJZTvGODnGVYDC4FTRlLhXJhmjEtg3slZV4Z&query=${name}`)
+    axios.get(`https://api.nal.usda.gov/fdc/v1/foods/search?api_key=329471d76fc144f79e282c665c95ea08&query=${name}`)
         .then(res => {
             console.log('usda food data for nutrition')
             console.log(res.data)
@@ -20,7 +20,7 @@
 
 //     let name = document.getElementById('name').value
 
-    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=85a06dbd80b548e1822e70e6227765b4&query=${name}`)
+    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=329471d76fc144f79e282c665c95ea08&query=${name}`)
         .then(res => {
             console.log('spoonacular for image')
             console.log(res.data)
@@ -65,7 +65,7 @@ document.getElementById('search').addEventListener('click', event => {
 
     let name = document.getElementById('name').value
 
-    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=645ce00f265642199dffbfb5a8d155ff&query=${name}`)
+    axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=329471d76fc144f79e282c665c95ea08&query=${name}`)
         .then(res => {
         console.log(res.data)
 
@@ -87,7 +87,7 @@ document.getElementById('search').addEventListener('click', event => {
             // imageEle.setAttribute('src', `${res.data.results[i].image}`)
             // imageEle.classList.add('image')
             // document.getElementById('nutrition').append(imageEle)
-            axios.get(`https://api.spoonacular.com/recipes/${res.data.results[i].id}/information?apiKey=645ce00f265642199dffbfb5a8d155ff&includeNutrition=true`)
+            axios.get(`https://api.spoonacular.com/recipes/${res.data.results[i].id}/information?apiKey=329471d76fc144f79e282c665c95ea08&includeNutrition=true`)
                 .then(res =>{
                 console.log(res.data)
             })
